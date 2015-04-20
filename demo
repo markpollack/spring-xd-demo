@@ -1,0 +1,79 @@
+Make sure hadoop is started
+
+bin/hdfs namenode -format
+
+sbin/start-dfs.sh
+
+or
+
+sbin/hadoop-daemon.sh start namenode
+sbin/hadoop-daemon.sh start datanode
+
+
+Go to xd/
+
+bin/xd-singlenode
+
+Go to shell/
+
+bin/xd-shell
+
+help
+
+module list
+
+module info source:http
+
+stream list
+
+stream create timer --definition "time | log" --deploy
+
+stream list
+
+stream create tweets --definition "twitterstream | hdfs --rollover=1M" --deploy
+
+stream destroy tweets
+
+Clean and start Zookeeper
+
+cd zookeeper-3.4.6/
+rm -rf data
+bin/zkServer.sh start-foreground
+
+redis-server
+
+bin/hsqldb-server
+
+bin/kafka-server-start.sh config/server.properties
+
+./xd-admin
+./xd-container
+./xd-container
+
+stream create tweetlang --definition "tap:stream:tweets > field-value-counter --fieldName=lang" --deploy
+
+field-value-counter list
+
+field-value-counter display tweetlang
+
+cd spring-xd-samples/analytics-dashboard
+
+./start-nginx.sh
+
+go http://localhost:9889/dashboard.html
+
+module upload --file ~/talk-spring-xd/avg-temperature/build/libs/avg-temperature-1.0.0.BUILD-SNAPSHOT.jar --type processor --name avg-temperature
+
+stream create temp-average --definition "http | avg-temperature --inputType=application/x-xd-tuple | log" --deploy
+
+module upload --file ~/talk-spring-xd/top-sensor/build/libs/top-sensor-1.0.0.BUILD-SNAPSHOT.jar --type processor --name top-sensors
+
+stream create temp-average --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --maxCount=3 | log" --deploy
+
+stream create temp-average-scaled --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --maxCount=3 | log"
+
+stream deploy temp-average-scaled --properties module.avg-temperature.count=2
+
+stream create temp-average-partitioned --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --maxCount=3 | log"
+
+stream deploy temp-average-partitioned --properties module.avg-temperature.count=2,module.http.producer.producer.partitionKeyExpression=payload.sensorId
