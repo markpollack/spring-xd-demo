@@ -17,8 +17,6 @@
 package com.acme.temperature.maximum;
 
 import static org.springframework.xd.tuple.TupleBuilder.tuple;
-import static rx.Observable.just;
-import static rx.Observable.zip;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -58,8 +56,16 @@ public class TopSensors implements Processor<Tuple, Tuple> {
 				.window(timeWindowLength, TimeUnit.MILLISECONDS, scheduler)
 				.flatMap(w ->
 						w.groupBy(t -> t.getInt("sensorId"))
-								.flatMap(g -> zip(just(g.getKey()), g.last().map(t->t.getDouble("averageTemperature")), (k, v) -> tuple().of("sensorId", k, "averageTemperature", v)))
-						.toSortedList((t1, t2) -> Double.compare(t2.getDouble("averageTemperature"), t1.getDouble("averageTemperature"))).map(l -> l.subList(0, Math.min(maxTopSensors, l.size()))).map(l -> tuple().of("hottest", asMap(l))));
+								.flatMap(g -> g.last())
+								.toSortedList(TopSensors::compareTemperatures)
+								.map(l -> l.subList(0, Math.min(maxTopSensors, l.size())))
+								.map(l -> tuple().of("hottest", asMap(l))));
+	}
+
+
+
+	private static Integer compareTemperatures(Tuple t1,Tuple t2) {
+		return Double.compare(t2.getDouble("averageTemperature"), t1.getDouble("averageTemperature"));
 	}
 
 	private static Map<String, Double> asMap(List<Tuple> tuples) {
