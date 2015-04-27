@@ -55,3 +55,7 @@ dependencies {
 	compile "io.reactivex:rxjava:1.0.0"
 	compile "io.reactivex:rxjava-math:1.0.0"
 }
+
+configurations.all {
+	exclude module:"log4j-over-slf4j"
+}

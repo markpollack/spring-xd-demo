@@ -17,42 +17,49 @@
 package com.acme.temperature.average;
 
 import static org.springframework.xd.tuple.TupleBuilder.tuple;
-import static rx.Observable.just;
-import static rx.Observable.zip;
 import static rx.observables.MathObservable.averageDouble;
 
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
+import rx.Scheduler;
+import rx.schedulers.Schedulers;
 
 import org.springframework.xd.rxjava.Processor;
 import org.springframework.xd.tuple.Tuple;
-import org.springframework.xd.tuple.TupleBuilder;
 
 /**
  * @author Marius Bogoevici
  */
-public class AverageBySensor implements Processor<Tuple,Tuple>{
+public class AverageBySensor implements Processor<Tuple,Tuple> {
 
 	private int timeWindowLength;
 
 	private int timeWindowShift;
+
+	private Scheduler scheduler = Schedulers.computation();
 
 	public AverageBySensor(int timeWindowLength, int timeWindowShift) {
 		this.timeWindowLength = timeWindowLength;
 		this.timeWindowShift = timeWindowShift;
 	}
 
+	public void setScheduler(Scheduler scheduler) {
+		this.scheduler = scheduler;
+	}
+
 	@Override
 	public Observable<Tuple> process(Observable<Tuple> inputStream) {
 
 		return inputStream
-				.window(timeWindowLength, timeWindowShift, TimeUnit.MILLISECONDS)
-				.flatMap(w -> w.groupBy(data -> data.getInt("sensorId"))
+				.window(timeWindowLength, timeWindowShift, TimeUnit.MILLISECONDS, scheduler)
+				.flatMap(w ->
+						w.groupBy(data -> data.getInt("sensorId"))
 								.flatMap(dataById ->
-										zip(just(dataById.getKey()),
-												 averageDouble(dataById.map(d -> d.getDouble("temperature"))).single(),
-												(k, v) -> TupleBuilder.tuple().of("sensorId", k, "averageTemperature", v))));
+												averageDouble(dataById.map(t -> t.getDouble("temperature")))
+														.map(d -> tuple().of("sensorId", dataById.getKey(), "averageTemperature", d))
+								)
+				);
 	}
 
 }
