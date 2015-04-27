@@ -26,6 +26,8 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
+import rx.Scheduler;
+import rx.schedulers.Schedulers;
 
 import org.springframework.xd.rxjava.Processor;
 import org.springframework.xd.tuple.Tuple;
@@ -39,20 +41,25 @@ public class TopSensors implements Processor<Tuple, Tuple> {
 
 	private int maxTopSensors;
 
+	private Scheduler scheduler = Schedulers.computation();
+
 	public TopSensors(int timeWindowLength, int maxTopSensors) {
 		this.timeWindowLength = timeWindowLength;
 		this.maxTopSensors = maxTopSensors;
 	}
 
+	public void setScheduler(Scheduler scheduler) {
+		this.scheduler = scheduler;
+	}
+
 	@Override
 	public Observable<Tuple> process(final Observable<Tuple> inputStream) {
 		return inputStream
-				.window(timeWindowLength, TimeUnit.MILLISECONDS)
+				.window(timeWindowLength, TimeUnit.MILLISECONDS, scheduler)
 				.flatMap(w ->
 						w.groupBy(t -> t.getInt("sensorId"))
 								.flatMap(g -> zip(just(g.getKey()), g.last().map(t->t.getDouble("averageTemperature")), (k, v) -> tuple().of("sensorId", k, "averageTemperature", v)))
 						.toSortedList((t1, t2) -> Double.compare(t2.getDouble("averageTemperature"), t1.getDouble("averageTemperature"))).map(l -> l.subList(0, Math.min(maxTopSensors, l.size()))).map(l -> tuple().of("hottest", asMap(l))));
-
 	}
 
 	private static Map<String, Double> asMap(List<Tuple> tuples) {
