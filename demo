@@ -50,6 +50,8 @@ bin/kafka-server-start.sh config/server.properties
 ./xd-container
 ./xd-container
 
+field-value-counter list
+
 stream create tweetlang --definition "tap:stream:tweets > field-value-counter --fieldName=lang" --deploy
 
 field-value-counter list
@@ -62,18 +64,24 @@ cd spring-xd-samples/analytics-dashboard
 
 go http://localhost:9889/dashboard.html
 
+
+--------------------------------------------------------------
+module delete processor:avg-temperature
+
+module delete processor:top-sensors
+
 module upload --file ~/talk-spring-xd/avg-temperature/build/libs/avg-temperature-1.0.0.BUILD-SNAPSHOT.jar --type processor --name avg-temperature
 
 stream create temp-average --definition "http | avg-temperature --inputType=application/x-xd-tuple | log" --deploy
 
 module upload --file ~/talk-spring-xd/top-sensor/build/libs/top-sensor-1.0.0.BUILD-SNAPSHOT.jar --type processor --name top-sensors
 
-stream create temp-average --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --maxCount=3 | log" --deploy
+stream create temp-average --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --topValues=3 | log" --deploy
 
-stream create temp-average-scaled --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --maxCount=3 | log"
+stream create temp-average-scaled --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --topValues=3 | log"
 
 stream deploy temp-average-scaled --properties module.avg-temperature.count=2
 
-stream create temp-average-partitioned --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --maxCount=3 | log"
+stream create temp-average-partitioned --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --topValues=3 | log"
 
 stream deploy temp-average-partitioned --properties module.avg-temperature.count=2,module.http.producer.producer.partitionKeyExpression=payload.sensorId
