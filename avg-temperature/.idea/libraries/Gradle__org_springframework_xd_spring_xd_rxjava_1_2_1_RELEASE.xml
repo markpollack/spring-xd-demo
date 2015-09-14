@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-rxjava:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-rxjava/1.2.1.RELEASE/a7a716e75400be27a29e3f65ba0ed04927183dea/spring-xd-rxjava-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-rxjava/1.2.1.RELEASE/a5db0b9d26b83849696462e633e58df2bdbc95e8/spring-xd-rxjava-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

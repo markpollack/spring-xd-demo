@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.twitter:parquet-generator:1.4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.twitter/parquet-generator/1.4.1/be24851a6c60dd86ee7e7ce65fb2c899d95c598b/parquet-generator-1.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.twitter/parquet-generator/1.4.1/47a572a6bb797db67d265ef17c9238b5e7cbe831/parquet-generator-1.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

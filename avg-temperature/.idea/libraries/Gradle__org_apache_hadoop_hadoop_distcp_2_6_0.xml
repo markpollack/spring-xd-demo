@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.hadoop:hadoop-distcp:2.6.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-distcp/2.6.0/21d7e6b98c456de65773ffaffb17bdd5a00dd399/hadoop-distcp-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-distcp/2.6.0/e958f93f5f47de83bef301c34e96ce77beed4be/hadoop-distcp-2.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

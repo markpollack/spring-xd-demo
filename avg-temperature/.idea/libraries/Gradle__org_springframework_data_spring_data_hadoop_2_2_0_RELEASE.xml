@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.data:spring-data-hadoop:2.2.0.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-hadoop/2.2.0.RELEASE/bef7285f9bc21d95238a6d1a926bcc5f170d0a21/spring-data-hadoop-2.2.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-hadoop/2.2.0.RELEASE/3486ef2a034a7ea466b6a5112c9387da873c3ccd/spring-data-hadoop-2.2.0.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

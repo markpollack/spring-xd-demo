@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-messagebus-spi:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-messagebus-spi/1.2.1.RELEASE/dff8540a1b7eafaaaf13751d722be9198a19cf17/spring-xd-messagebus-spi-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-messagebus-spi/1.2.1.RELEASE/de0660d9c86775da357f73d5e9c411ef179c7fbb/spring-xd-messagebus-spi-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

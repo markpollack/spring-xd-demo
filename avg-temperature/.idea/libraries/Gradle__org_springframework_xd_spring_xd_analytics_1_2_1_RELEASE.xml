@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-analytics:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-analytics/1.2.1.RELEASE/c49ec6f14eecc51e5312678676942b97541a1a00/spring-xd-analytics-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-analytics/1.2.1.RELEASE/b0d7da6a8319bb9248fbf87c52b7eeab786675c8/spring-xd-analytics-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

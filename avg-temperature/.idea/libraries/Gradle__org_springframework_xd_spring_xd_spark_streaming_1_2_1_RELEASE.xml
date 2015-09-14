@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-spark-streaming:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-spark-streaming/1.2.1.RELEASE/28df5495361dee31ca4c80760477e25af7798321/spring-xd-spark-streaming-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-spark-streaming/1.2.1.RELEASE/2b77fb7b5151e206437b762d1581994b0281826e/spring-xd-spark-streaming-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

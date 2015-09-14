@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.kitesdk:kite-hadoop-compatibility:1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kitesdk/kite-hadoop-compatibility/1.0.0/f4c97a7ffac8b7689ceb71629f21adfd190f2f33/kite-hadoop-compatibility-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kitesdk/kite-hadoop-compatibility/1.0.0/4ac388da10939fdc17268acf6e819ac4086c798e/kite-hadoop-compatibility-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

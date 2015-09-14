@@ -13,11 +13,11 @@ buildscript {
 		jcenter()
 	}
 	dependencies {
-		classpath("org.springframework.xd:spring-xd-module-plugin:1.1.1.RELEASE")
+		classpath("org.springframework.xd:spring-xd-module-plugin:1.2.1.RELEASE")
 	}
 }
 ext {
-	springXdVersion = '1.1.1.RELEASE'
+	springXdVersion = '1.2.1.RELEASE'
 	hadoopVersion = '2.6.0'
 }
 

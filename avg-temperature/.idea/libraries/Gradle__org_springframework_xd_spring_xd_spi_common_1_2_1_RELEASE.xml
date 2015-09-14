@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-spi-common:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-spi-common/1.2.1.RELEASE/f0fca6e3ccafb53a3821a11373281d0f672afaf/spring-xd-spi-common-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-spi-common/1.2.1.RELEASE/1470866d4b8e0f108aaf659ed6d0391419aa32b3/spring-xd-spi-common-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

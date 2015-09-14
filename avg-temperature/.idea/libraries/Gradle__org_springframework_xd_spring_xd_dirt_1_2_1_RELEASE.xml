@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-dirt:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-dirt/1.2.1.RELEASE/c987d1c15c53fc8e15f935b691d155829d37e985/spring-xd-dirt-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-dirt/1.2.1.RELEASE/498d8c810dd48c42bf91703d75b35399b4cb5fa0/spring-xd-dirt-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

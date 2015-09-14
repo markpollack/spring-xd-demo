@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-tuple:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-tuple/1.2.1.RELEASE/cfd7d3edac235c4d003d7d295016602c89c46796/spring-xd-tuple-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-tuple/1.2.1.RELEASE/a0607a531b3dcb958d58e50343c4e62a5a4170f8/spring-xd-tuple-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

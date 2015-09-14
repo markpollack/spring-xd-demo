@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-batch:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-batch/1.2.1.RELEASE/89118049aefea708b5d2b744134d9d302bbd8064/spring-xd-batch-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-batch/1.2.1.RELEASE/a43b3f640603ef21b33ff3404fee15f3a66ae58e/spring-xd-batch-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

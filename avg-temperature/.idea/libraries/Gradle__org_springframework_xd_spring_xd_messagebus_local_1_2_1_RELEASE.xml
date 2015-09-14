@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-messagebus-local:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-messagebus-local/1.2.1.RELEASE/4ac5009d8af4c44a9edf2392db198a952d53e87/spring-xd-messagebus-local-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-messagebus-local/1.2.1.RELEASE/70cfb6c7049e08e23a7d5c1337c7f7cfe99d9c5f/spring-xd-messagebus-local-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

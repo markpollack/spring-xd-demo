@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-hadoop:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-hadoop/1.2.1.RELEASE/ce376bdbd76f7abc8b02c7820c68c37e83f17056/spring-xd-hadoop-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-hadoop/1.2.1.RELEASE/feddd45ce3ce4bd08fce9bb604d1a1a0147f83a3/spring-xd-hadoop-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

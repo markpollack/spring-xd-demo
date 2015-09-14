@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-test:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-test/1.2.1.RELEASE/9e372a5bc52004d77e9a9922264eacfe42591b48/spring-xd-test-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-test/1.2.1.RELEASE/ab275d30f12fc2061477e7bbe979e7b51c642cfb/spring-xd-test-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

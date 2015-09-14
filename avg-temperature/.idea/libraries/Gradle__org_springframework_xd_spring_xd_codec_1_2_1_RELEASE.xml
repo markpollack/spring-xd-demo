@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.xd:spring-xd-codec:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-codec/1.2.1.RELEASE/a31865e1fbd616c0cc71f7436da793cb1db85d8/spring-xd-codec-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.xd/spring-xd-codec/1.2.1.RELEASE/5bd72be35571475209546361d4783e456b0ac829/spring-xd-codec-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

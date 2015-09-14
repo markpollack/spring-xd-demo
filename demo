@@ -84,4 +84,13 @@ stream deploy temp-average-scaled --properties module.avg-temperature.count=2
 
 stream create temp-average-partitioned --definition "http | avg-temperature --inputType=application/x-xd-tuple | top-sensors --topValues=3 | log"
 
-stream deploy temp-average-partitioned --properties module.avg-temperature.count=2,module.http.producer.producer.partitionKeyExpression=payload.sensorId
+stream deploy temp-average-partitioned --properties module.avg-temperature.count=2,module.http.producer.partitionKeyExpression=payload.sensorId
+
+== Generate data
+./data-generator.sh 10 1 10
+
+
+== Show data in partitioned topics used to compute average
+./kafka-topics.sh --list --zookeeper localhost:2181
+stream create --name kakfap0 --definition "kafka --topic=temp-average-partitioned.0 --partitions=0 --outputType=text/plain | log" --deploy
+stream create --name kakfap1 --definition "kafka --topic=temp-average-partitioned.0 --partitions=1 --outputType=text/plain | log" --deploy

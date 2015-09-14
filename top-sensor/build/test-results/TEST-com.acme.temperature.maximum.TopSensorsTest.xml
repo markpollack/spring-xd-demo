@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.acme.temperature.maximum.TopSensorsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-09-14T12:12:37" hostname="feynman" time="0.362">
+  <properties/>
+  <testcase name="testTopSensors" classname="com.acme.temperature.maximum.TopSensorsTest" time="0.362"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
